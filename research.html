@@ -97,7 +97,21 @@
             padding: 10px;
             margin-top: 20px;
             border-top: #007bff 3px solid;
-        }
+}
+
+.section-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section-column {
+    flex: 1;
+    background-color: rgba(0, 123, 255, 0.1); /* Transparent blue background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
     </style>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -118,10 +132,11 @@
         </nav>
     </header>
 
-    <div class="container">
-        <section id="research-details">
-            <div class="section-title">My Research</div>
-            <div class="section-content">
+ <div class="container">
+    <section id="research-details">
+        <div class="section-title">My Research</div>
+        <div class="section-columns">
+            <div class="section-column">
                 <p><b>Experiment:</b></p>
                 <p>
                     I am broadly interested in heavy-ion physics. My research mainly focuses on the ALICE experiment at CERN. 
@@ -133,6 +148,8 @@
                     Finally, the polarization parameters are studied in these two reference frames as functions of transverse momentum. I mainly work with the AliPhysics framework, which was used for the data analysis of RUN 1 and RUN 2 data obtained by the ALICE collaboration. 
                     In addition to this, I am also involved in a service task to check the compatibility of RUN 2 converted data to the O2 framework, which is being used for the RUN 3 data analysis. I am also involved in and guiding new PhD students who are working on \(\Upsilon(nS)\) and \(\phi\) polarization in the dimuon channel with RUN3 data.
                 </p>
+            </div>
+            <div class="section-column">
                 <p><b>Phenomenology:</b></p>
                 <p>
                     On the phenomenological side, my work concerns with possible QGP droplet formation in high multiplicity proton-proton collisions. 
@@ -144,8 +161,10 @@
                     Overall, the study of the QCD phase structure gets more interesting with the addition of extra dimensions such as magnetic field and rotation. I also explore the QCD phase diagram through the interacting hadron resonance gas model to try to constrain the location of both the QCD critical point and the liquid-gas critical point.
                 </p>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+</div>
+
 
     <footer>
         <p>© 2024 Dr. Dushmanta Sahu. All rights reserved.</p>
