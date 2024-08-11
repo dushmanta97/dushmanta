@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Dushmanta Sahu - Publications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background-image: url('header-background.jpg'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #007bff 3px solid;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(53, 66, 74, 0.8); /* Dark overlay with transparency */
+            z-index: -1;
+        }
+        header h1 {
+            text-transform: uppercase;
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #007bff;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav ul li a.active {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        nav ul li a:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+        .section-title {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .section-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            text-align: left;
+            list-style-position: inside;
+        }
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-top: #007bff 3px solid;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="profile.jpg" alt="Dr. Dushmanta Sahu">
+    <h1>Dr. Dushmanta Sahu</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html" class="active">Publications</a></li>
+            <li><a href="CV-Dushmanta-Sahu.pdf" target="_blank">Download CV</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div style="text-align: center; margin: 20px 0;">
+    <img src="pub.jpg" alt="Publications Image" style="width:30%; margin: 10px 0;">
+</div>
+
+<div class="container">
+    <section id="publications">
+        <div class="section-title">Publications</div>
+        <div class="section-content">
+            <ul>
+                <li>D. Sahu, S. Tripathy, G. S. Pradhan and R. Sahoo,
+                    "Role of event multiplicity on hadronic phase lifetime and QCD phase boundary in ultrarelativistic collisions at energies available at the BNL Relativistic Heavy Ion Collider and CERN Large Hadron Collider",
+                    Phys. Rev. C 101, 014902 (2020)</li>
+                <li>D. Sahu, S. Tripathy, R. Sahoo and S. K. Tiwari,
+                    "Possible formation of a perfect fluid in pp, p-Pb, Xe-Xe and Pb-Pb collisions at the Large Hadron Collider energies: a color string percolation approach",
+                    Eur. Phys. J. A 58, 78 (2022)</li>
+                <li>D. Sahu, S. Tripathy, R. Sahoo and A. R. Dash,
+                    "Multiplicity dependence of shear viscosity, isothermal compressibility and speed of sound in pp collisions at $\sqrt{s}$ = 7 TeV",
+                    Eur. Phys. J. A 56, 187 (2020)</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>© 2024 Dr. Dushmanta Sahu. All rights reserved.</p>
+</footer>
+</body>
+</html>
