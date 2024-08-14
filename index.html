@@ -33,6 +33,7 @@
             text-align: center;
             position: relative;
             z-index: 1;
+            cursor: pointer;
         }
         header::before {
             content: "";
@@ -47,13 +48,13 @@
         header h1 {
             margin: 10px 0;
             font-size: 24px;
-}
-header h2 {
-    margin: 5px 0;
-    font-size: 18px;
-    font-weight: normal; /* Ensures the text isn't bold */
-    color: #cccccc;
-}
+        }
+        header h2 {
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: normal;
+            color: #cccccc;
+        }
         header img {
             border-radius: 50%;
             width: 150px;
@@ -105,7 +106,6 @@ header h2 {
             border-top: #007bff 3px solid;
         }
 
-        /* Publications Section */
         .publication {
             display: flex;
             flex-direction: row;
@@ -114,8 +114,8 @@ header h2 {
             padding-bottom: 20px;
         }
         .publication img {
-            width: 300px; /* Increased the width */
-            height: auto; /* Maintain the aspect ratio */
+            width: 300px;
+            height: auto;
             margin-right: 20px;
             object-fit: cover;
             cursor: pointer;
@@ -166,29 +166,27 @@ header h2 {
     </style>
 </head>
 <body>
-    <header>
+    <header id="header-background">
         <img src="profile.jpg" alt="Dr. Dushmanta Sahu" id="profile-pic">
-<h1>Dr. Dushmanta Sahu</h1>
-<h2>Experimental physicist, ALICE experiment, CERN</h2>
+        <h1>Dr. Dushmanta Sahu</h1>
+        <h2>Experimental physicist, ALICE experiment, CERN</h2>
         <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="talks.html">Talks</a></li>
-        <li><a href="CV-Dushmanta-Sahu.pdf" target="_blank">Download CV</a></li>
-        <li><a href="https://inspirehep.net/authors/1843104?ui-citation-summary=true" target="_blank">InspireHEP</a></li>
-    </ul>
-</nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="CV-Dushmanta-Sahu.pdf" target="_blank">Download CV</a></li>
+                <li><a href="https://inspirehep.net/authors/1843104?ui-citation-summary=true" target="_blank">InspireHEP</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="container">
         <section id="about">
             <div class="section-title">About Me</div>
             <div class="section-content">
-                <p>I finished my PhD from Indian Institute of
-        Techology Indore, India in June 2024. My topic of research was
-        mainly quark gluon plasma. I did my Bachelor's degree with Honors in Physics from T.F. College, Bargarh, Odisha, India. My Master's degree was in High Energy Physics specialization from Sambalpur University, Odisha, India.</p>
+                <p>I finished my PhD from Indian Institute of Technology Indore, India in June 2024. My topic of research was mainly quark gluon plasma. I did my Bachelor's degree with Honors in Physics from T.F. College, Bargarh, Odisha, India. My Master's degree was in High Energy Physics specialization from Sambalpur University, Odisha, India.</p>
             </div>
         </section>
 
@@ -198,7 +196,7 @@ header h2 {
                 <p>Email: Dushmanta.Sahu@cern.ch, imdushmanta@gmail.com</p>
                 <p>Phone: +917682866142</p>
                 <p>Address: At- Baulsingha, Po- Tejagola, Via- Bhatli,
-            Bargarh, Odisha, India, PIN- 768030</p>
+                Bargarh, Odisha, India, PIN- 768030</p>
             </div>
         </section>
 
@@ -232,8 +230,7 @@ header h2 {
                 <div class="publication">
                     <img src="publication2.jpg" alt="Publication 2" class="publication-img">
                     <div class="publication-details">
-                        <div class="publication-title">J/ψ and ψ(2S) polarization in proton-proton collisions at energies available at the CERN Large
-Hadron Collider using PYTHIA8</div>
+                        <div class="publication-title">J/ψ and ψ(2S) polarization in proton-proton collisions at energies available at the CERN Large Hadron Collider using PYTHIA8</div>
                         <div class="publication-authors">B. Sahoo,
             D. Sahu, S. Deb, C. R. Singh, R. Sahoo</div>
                         <div class="publication-journal">Physical Review C 109, 034910 (2024)</div>
@@ -272,13 +269,17 @@ Hadron Collider using PYTHIA8</div>
     </div>
 
     <script>
-        const images = document.querySelectorAll('.publication-img');
+        const images = document.querySelectorAll('.publication-img, #profile-pic');
         const lightboxOverlay = document.getElementById('lightbox-overlay');
         const lightboxImg = document.getElementById('lightbox-img');
 
         images.forEach(image => {
             image.addEventListener('click', () => {
-                lightboxImg.src = image.src;
+                if (image.id === 'profile-pic') {
+                    lightboxImg.src = 'profile.jpg';
+                } else {
+                    lightboxImg.src = image.src;
+                }
                 lightboxOverlay.style.display = 'flex';
             });
         });
