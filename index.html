@@ -22,7 +22,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         header {
-            background-image: url('header-background.jpg'); /* Add your background image here */
+            background-image: url('header-background.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -41,13 +41,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(53, 66, 74, 0.8); /* Dark overlay with transparency */
+            background-color: rgba(53, 66, 74, 0.8);
             z-index: -1;
         }
         header h1 {
             margin: 10px 0;
             font-size: 24px;
-        }
+}
+header h2 {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: normal; /* Ensures the text isn't bold */
+    color: #cccccc;
+}
         header img {
             border-radius: 50%;
             width: 150px;
@@ -99,23 +105,62 @@
             border-top: #007bff 3px solid;
         }
 
-        /* Lightbox styles */
+        /* Publications Section */
+        .publication {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        .publication img {
+            width: 300px; /* Increased the width */
+            height: auto; /* Maintain the aspect ratio */
+            margin-right: 20px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .publication-details {
+            flex: 1;
+        }
+        .publication-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 10px;
+            color: #007bff;
+        }
+        .publication-authors {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .publication-journal {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .publication-description {
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Lightbox Styles */
         #lightbox-overlay {
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.8);
-            display: none;
             justify-content: center;
             align-items: center;
             z-index: 1000;
         }
-
         #lightbox-overlay img {
-            max-width: 90%;
-            max-height: 90%;
+            max-width: 80%;
+            max-height: 80%;
+            border: 3px solid #fff;
             border-radius: 10px;
         }
     </style>
@@ -123,23 +168,27 @@
 <body>
     <header>
         <img src="profile.jpg" alt="Dr. Dushmanta Sahu" id="profile-pic">
-        <h1>Dr. Dushmanta Sahu</h1>
+<h1>Dr. Dushmanta Sahu</h1>
+<h2>Experimental physicist, ALICE experiment, CERN</h2>
         <nav>
-            <ul>
-                <li><a href="#Home" class="active">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="CV-Dushmanta-Sahu.pdf" target="_blank">Download CV</a></li>
-                <li><a href="https://inspirehep.net/authors/1843104?ui-citation-summary=true" target="_blank">InspireHEP</a></li> <!-- New tab for InspireHEP -->
-            </ul>
-        </nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="CV-Dushmanta-Sahu.pdf" target="_blank">Download CV</a></li>
+        <li><a href="https://inspirehep.net/authors/1843104?ui-citation-summary=true" target="_blank">InspireHEP</a></li>
+    </ul>
+</nav>
     </header>
 
     <div class="container">
         <section id="about">
             <div class="section-title">About Me</div>
             <div class="section-content">
-                <p>I did my Bachelor's degree with Honors in Physics from T.F. College, Bargarh, Odisha, India. My Master's degree was in High Energy Physics specialization from Sambalpur University, Odisha, India.</p>
+                <p>I finished my PhD from Indian Institute of
+        Techology Indore, India in June 2024. My topic of research was
+        mainly quark gluon plasma. I did my Bachelor's degree with Honors in Physics from T.F. College, Bargarh, Odisha, India. My Master's degree was in High Energy Physics specialization from Sambalpur University, Odisha, India.</p>
             </div>
         </section>
 
@@ -152,23 +201,86 @@
             Bargarh, Odisha, India, PIN- 768030</p>
             </div>
         </section>
+
+        <section id="publications">
+            <div class="section-title">Recent Publications</div>
+            <div class="section-content">
+                <div class="publication">
+                    <img src="publication1.jpg" alt="Publication 1" class="publication-img">
+                    <div class="publication-details">
+                        <div class="publication-title">Anisotropy of magnetized quark matter</div>
+                        <div class="publication-authors">K. Goswami,
+            D. Sahu, J. Dey, R. Sahoo and R. Stock</div>
+                        <div class="publication-journal">Physical Review D 109, 074012 (2024)</div>
+                        <div class="publication-description">Strong
+            transient magnetic fields are generated in noncentral
+            relativistic heavy-ion collisions. These fields induce
+            anisotropy within the strongly interacting medium that, in
+            principle, can affect the thermodynamic properties of the
+            medium. We use the Polyakov loop extended Nambu
+            Jona-Lasinio model to study the quark matter subjected to
+            an external magnetic field at vanishing baryon chemical
+            potential (μB). We have estimated the degree of anisotropy
+            in the speed of sound and isothermal compressibility
+            within the magnetized quark matter as a function of
+            temperature (T) and magnetic field (eB). This study helps
+            us to understand the extent of directionality generated in
+            the initial stages of noncentral collisions while giving
+            us useful information about the system.</div>
+                    </div>
+                </div>
+                <div class="publication">
+                    <img src="publication2.jpg" alt="Publication 2" class="publication-img">
+                    <div class="publication-details">
+                        <div class="publication-title">J/ψ and ψ(2S) polarization in proton-proton collisions at energies available at the CERN Large
+Hadron Collider using PYTHIA8</div>
+                        <div class="publication-authors">B. Sahoo,
+            D. Sahu, S. Deb, C. R. Singh, R. Sahoo</div>
+                        <div class="publication-journal">Physical Review C 109, 034910 (2024)</div>
+                        <div class="publication-description">The
+            production mechanisms of charmonium states in both
+            hadronic and heavy-ion collisions hold great significance
+            for investigating the hot and dense QCD matter. Studying
+            charmonium polarization in ultrarelativistic collisions
+            can also provide insights into the underlying production
+            mechanisms. With this motivation, we explore the J/ψ and
+            ψ(2S) polarization in proton+proton collisions at √s = 7,
+            8, and 13 TeV using a pQCD-inspired Monte Carlo event
+            generator cal ed PYTHIA8. This work considers
+            reconstructed quarkonia through their dimuons decay
+            channel in the  ALICE forward rapidity acceptance range of 2.5 <
+            yμμ < 4. Further, we calculate the polarization parameters
+            λθ , λφ, λθφ from the polar and azimuthal angular
+            distributions of the dimuons in helicity and Collins-Soper
+            frames. This study presents a comprehensive measurement of
+            the polarization parameters as a function of transverse
+            momentum, charged-particle multiplicity, and rapidity at
+            the LHC energies. Our findings of charmonium polarization are in qualitative agreement with the corresponding experimental data.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer>
         <p>© 2024 Dr. Dushmanta Sahu. All rights reserved.</p>
     </footer>
 
-    <!-- Lightbox Overlay -->
+    <!-- Lightbox HTML -->
     <div id="lightbox-overlay">
-        <img src="profile.jpg" alt="Dr. Dushmanta Sahu">
+        <img id="lightbox-img" src="" alt="Expanded Image">
     </div>
 
     <script>
-        const profilePic = document.getElementById('profile-pic');
+        const images = document.querySelectorAll('.publication-img');
         const lightboxOverlay = document.getElementById('lightbox-overlay');
+        const lightboxImg = document.getElementById('lightbox-img');
 
-        profilePic.addEventListener('click', () => {
-            lightboxOverlay.style.display = 'flex';
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                lightboxImg.src = image.src;
+                lightboxOverlay.style.display = 'flex';
+            });
         });
 
         lightboxOverlay.addEventListener('click', () => {
