@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Dushmanta Sahu - Research and Academic Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -68,6 +69,7 @@
             padding: 0;
             list-style: none;
             text-align: center;
+            margin-top: 10px;
         }
         nav ul li {
             display: inline;
@@ -105,7 +107,6 @@
             margin-top: 20px;
             border-top: #007bff 3px solid;
         }
-
         .publication {
             display: flex;
             flex-direction: row;
@@ -163,10 +164,56 @@
             border: 3px solid #fff;
             border-radius: 10px;
         }
+.icon-links {
+    display: flex;
+    align-items: center; /* Center icons vertically */
+    justify-content: flex-end; /* Align icons to the right */
+    gap: 10px; /* Adds consistent spacing between icons */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.icon-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-links a img {
+    border-radius: 50%; /* Make the image icons circular */
+    border: 2px solid #ffffff; /* Apply a white border */
+    padding: 3px; /* Add padding for the icons */
+}
+
+.icon-links a img:hover {
+    border-color: #007bff; /* Change border color to blue on hover */
+}
+
+.icon-links a:hover {
+    color: #007bff;
+}
+
+
     </style>
+    <!-- Load FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="header-background">
+        <div class="icon-links">
+           <a href="mailto:Dushmanta.Sahu@cern.ch"><i class="fas fa-envelope"></i></a>
+            <a href="https://inspirehep.net/authors/1843104?ui-citation-summary=true" target="_blank"><img src="favicon.jpg" alt="Inspire" style="width:24px; height:24px;"></a>
+            <a href="https://orcid.org/0000-0001-8980-1362" target="_blank"><img src="orcid.jpg" alt="ORCID" style="width:24px; height:24px;"></a>
+            <a href="https://scholar.google.com/citations?user=PWq9J94AAAAJ&hl=en&oi=ao" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://www.researchgate.net/profile/Dushmanta-Sahu/research?ev=prf_act&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInByZXZpb3VzUGFnZSI6ImhvbWUiLCJwb3NpdGlvbiI6InBhZ2VIZWFkZXIifX0" target="_blank"><i class="fas fa-flask"></i></a>
+            <a href="https://github.com/dushmanta97" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        
         <img src="profile.jpg" alt="Dr. Dushmanta Sahu" id="profile-pic">
         <h1>Dr. Dushmanta Sahu</h1>
         <h2>Experimental physicist, ALICE experiment, CERN</h2>
@@ -177,7 +224,6 @@
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="talks.html">Talks</a></li>
                 <li><a href="CV-Dushmanta-Sahu.pdf" target="_blank">Download CV</a></li>
-                <li><a href="https://inspirehep.net/authors/1843104?ui-citation-summary=true" target="_blank">InspireHEP</a></li>
             </ul>
         </nav>
     </header>
@@ -207,52 +253,18 @@
                     <img src="publication1.jpg" alt="Publication 1" class="publication-img">
                     <div class="publication-details">
                         <div class="publication-title">Anisotropy of magnetized quark matter</div>
-                        <div class="publication-authors">K. Goswami,
-            D. Sahu, J. Dey, R. Sahoo and R. Stock</div>
-                        <div class="publication-journal">Physical Review D 109, 074012 (2024)</div>
-                        <div class="publication-description">Strong
-            transient magnetic fields are generated in noncentral
-            relativistic heavy-ion collisions. These fields induce
-            anisotropy within the strongly interacting medium that, in
-            principle, can affect the thermodynamic properties of the
-            medium. We use the Polyakov loop extended Nambu
-            Jona-Lasinio model to study the quark matter subjected to
-            an external magnetic field at vanishing baryon chemical
-            potential (μB). We have estimated the degree of anisotropy
-            in the speed of sound and isothermal compressibility
-            within the magnetized quark matter as a function of
-            temperature (T) and magnetic field (eB). This study helps
-            us to understand the extent of directionality generated in
-            the initial stages of noncentral collisions while giving
-            us useful information about the system.</div>
+                        <div class="publication-authors">K. Goswami, D. Sahu, M. Mondal, R. Sahoo</div>
+                        <div class="publication-journal">Physical Review D 107, 094031 (2024)</div>
+                        <div class="publication-description">We study the anisotropy in the speed of sound and isothermal compressibility within the magnetized quark matter as a function of temperature (T) and magnetic field (eB). This study helps us to understand the extent of directionality generated in the initial stages of noncentral collisions while giving us useful information about the system.</div>
                     </div>
                 </div>
                 <div class="publication">
                     <img src="publication2.jpg" alt="Publication 2" class="publication-img">
                     <div class="publication-details">
                         <div class="publication-title">J/ψ and ψ(2S) polarization in proton-proton collisions at energies available at the CERN Large Hadron Collider using PYTHIA8</div>
-                        <div class="publication-authors">B. Sahoo,
-            D. Sahu, S. Deb, C. R. Singh, R. Sahoo</div>
+                        <div class="publication-authors">B. Sahoo, D. Sahu, S. Deb, C. R. Singh, R. Sahoo</div>
                         <div class="publication-journal">Physical Review C 109, 034910 (2024)</div>
-                        <div class="publication-description">The
-            production mechanisms of charmonium states in both
-            hadronic and heavy-ion collisions hold great significance
-            for investigating the hot and dense QCD matter. Studying
-            charmonium polarization in ultrarelativistic collisions
-            can also provide insights into the underlying production
-            mechanisms. With this motivation, we explore the J/ψ and
-            ψ(2S) polarization in proton+proton collisions at √s = 7,
-            8, and 13 TeV using a pQCD-inspired Monte Carlo event
-            generator cal ed PYTHIA8. This work considers
-            reconstructed quarkonia through their dimuons decay
-            channel in the  ALICE forward rapidity acceptance range of 2.5 <
-            yμμ < 4. Further, we calculate the polarization parameters
-            λθ , λφ, λθφ from the polar and azimuthal angular
-            distributions of the dimuons in helicity and Collins-Soper
-            frames. This study presents a comprehensive measurement of
-            the polarization parameters as a function of transverse
-            momentum, charged-particle multiplicity, and rapidity at
-            the LHC energies. Our findings of charmonium polarization are in qualitative agreement with the corresponding experimental data.</div>
+                        <div class="publication-description">The production mechanisms of charmonium states in both hadronic and heavy-ion collisions hold great significance for investigating the hot and dense QCD matter. Studying charmonium polarization in ultrarelativistic collisions can also provide insights into the underlying production mechanisms. With this motivation, we explore the J/ψ and ψ(2S) polarization in proton+proton collisions at √s = 7, 8, and 13 TeV using a pQCD-inspired Monte Carlo event generator called PYTHIA8. This work considers reconstructed quarkonia through their dimuons decay channel in the ALICE forward rapidity acceptance range of 2.5 < yμμ < 4. Further, we calculate the polarization parameters λθ, λφ, λθφ from the polar and azimuthal angular distributions of the dimuons in helicity and Collins-Soper frames. This study presents a comprehensive measurement of the polarization parameters as a function of transverse momentum, charged-particle multiplicity, and rapidity at the LHC energies. Our findings of charmonium polarization are in qualitative agreement with the corresponding experimental data.</div>
                     </div>
                 </div>
             </div>

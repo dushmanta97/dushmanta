@@ -47,13 +47,13 @@
         header h1 {
             margin: 10px 0;
             font-size: 24px;
-}
-header h2 {
-    margin: 5px 0;
-    font-size: 18px;
-    font-weight: normal; /* Ensures the text isn't bold */
-    color: #cccccc;
-}
+        }
+        header h2 {
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: normal;
+            color: #cccccc;
+        }
         header img {
             border-radius: 50%;
             width: 150px;
@@ -110,6 +110,26 @@ header h2 {
             margin-bottom: 30px;
             border-bottom: 1px solid #ddd;
             padding-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .talk-content {
+            flex: 1;
+        }
+        .talk img {
+            width: 200px;
+            height: 130px;
+            object-fit: cover;
+            margin-left: 20px;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .talk img:hover {
+            transform: scale(1.05);
+        }
+        .talk img:active {
+            transform: scale(0.95);
         }
         .talk-title {
             font-size: 18px;
@@ -126,13 +146,34 @@ header h2 {
             font-size: 14px;
             color: #333;
         }
+
+        /* Lightbox Styling */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .lightbox:target {
+            display: flex;
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="profile.jpg" alt="Dr. Dushmanta Sahu">
-<h1>Dr. Dushmanta Sahu</h1>
-<h2>Experimental physicist, ALICE experiment, CERN</h2>
+        <h1>Dr. Dushmanta Sahu</h1>
+        <h2>Experimental physicist, ALICE experiment, CERN</h2>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -148,121 +189,94 @@ header h2 {
     <div class="container">
         <section id="talks">
             <div class="section-title">Talks given</div>
-	    <div class="section-content">
+            <div class="section-content">
 
-	      	    </div>
-                <div class="talk">
-                    <div class="talk-title">Quarkonium polarization in pp and Pb-Pb collisions with ALICE</div>
-                    <div class="talk-venue">ALICE India Collaboration Seminar, India</div>
-                    <div class="talk-date">Date: April, 2024</div>
-                    <div class="talk-description">
-                        In this talk I discuss the quarkonium
-                polarization in ALICE experiment at LHC.
-		    </div>
-
-		    
-
-	    </div>
-                <div class="talk">
-                    <div class="talk-title">Quarkonium polarization at the LHC energies</div>
-                    <div class="talk-venue">RDFP, Sambalpur University, India</div>
-                    <div class="talk-date">Date: March, 2024</div>
-                    <div class="talk-description">
-                        In this talk I discuss the quarkonium
-                polarization in ALICE experiment at LHC.
-		    </div>
-
-		    
-
-	      	      	       </div>
-                <div class="talk">
-                    <div class="talk-title">Thermodynamics and statistical mechanics in heavy-ion collisions</div>
-                    <div class="talk-venue">Physics Club, IIT Indore, India</div>
-                    <div class="talk-date">Date: January, 2024</div>
-                    <div class="talk-description">
-                        In this talk I discuss the application of
-                thermodynamics and statistical mechanics in heavy-ion
-                collisions.
-		    </div>
-		    
-
-
-	      	       </div>
-                <div class="talk">
-                    <div class="talk-title">Dynamics of open charmed hadrons in an interacting hadronic medium</div>
-                    <div class="talk-venue">Heavy Flavor Meet, IIT
-                Goa, Goa, India</div>
-                    <div class="talk-date">Date: November, 2023</div>
-                    <div class="talk-description">
-                        This talk discusses the diffusion and
-                fluctuation of open charmed hadrons in heavy-ion
-                collision with the help of an interacting van der
-                Waals hadron resonance gas.
-		    </div>
-		    
-
-	       </div>
-                <div class="talk">
-                    <div class="talk-title">Quarkonium polarization in pp and Pb-Pb collisions with ALICE</div>
-                    <div class="talk-venue">Rencontres du Vietnam: Windows on the Universe, Quy Nhon, Vietnam</div>
-                    <div class="talk-date">Date: August, 2023</div>
-                    <div class="talk-description">
-                        This talk discusses the polarization of
-                quarkonia in the ALICE experiment. New results in pp
-                and Pb-Pb collisions are presented.
-		    </div>
-
-	      	      </div>
-                <div class="talk">
-                    <div class="talk-title">Possibility of a QCD medium formation in LHC proton+proton collisions: A Color String Percolation Approach</div>
-                    <div class="talk-venue">DAE-BRNS CETHEP Symposium, VECC, Kolkata, India</div>
-                    <div class="talk-date">Date: November, 2022</div>
-                    <div class="talk-description">
-                        In this talk I discussed a possibility of QGP
-                droplets formation in small system collisions.
-		    </div>
-
-	      </div>
-                <div class="talk">
-                    <div class="talk-title">Estimation of hadronic phase lifetime and locating the QGP phase boundary</div>
-                    <div class="talk-venue">Hot QCD Matter Conference, IIT Goa, Goa, India</div>
-                    <div class="talk-date">Date: May, 2022</div>
-                    <div class="talk-description">
-                        In this talk I discussed a possible way of
-                estimating the hadronic phase lifetime by using a
-                nuclear deacy-like toy model. A finite hadronic phase
-                lifetime is estimated for high multiplicity pp
-                collisions which is of interest for further investigations.
-		    </div>
-
-	      </div>
-                <div class="talk">
-                    <div class="talk-title">Dissipative properties of the matter formed at the Large Hadron Collider energies using Color String Percolation Model</div>
-                    <div class="talk-venue">DAE-HEP, NISER,
-        Bhubaneswar, India</div>
-                    <div class="talk-date">Date: February, 2021</div>
-                    <div class="talk-description">
-                        This talk focused on the dissipative
-        properties of matter produced in the relativistic heavy-ion
-        collisions. It discussed the threshold of phase transition
-        through exploring the dissipative properties with color string
-        percolation model.
-		    </div>
-
-		    
-                <div class="talk">
-                    <div class="talk-title">Multiplicity dependence study of thermodynamic and transport properties of the matter formed in ultra-relativistic collisions at LHC using Color String Percolation Model,, 2020 </div>
-                    <div class="talk-venue">Venue: DAE-NP, India</div>
-                    <div class="talk-date">Date: December, 2021</div>
-                    <div class="talk-description">
-                        This talk delves into the formation and
-        properties of quark-gluon plasma (QGP) in small systems and
-        the threshold of charged-particle required for its production.
+	    <div class="talk">
+                    <div class="talk-content">
+                        <div class="talk-title">Quarkonium polarization in pp and Pb-Pb collisions with ALICE</div>
+                        <div class="talk-venue">ALICE India Collaboration Seminar, India</div>
+                        <div class="talk-date">Date: April, 2024</div>
+                        <div class="talk-description">
+                            In this talk I discuss the quarkonium polarization in ALICE experiment at LHC.
+                        </div>
                     </div>
-                
+                    <a href="#lightbox1"><img src="conference1.jpg" alt="ALICE India Collaboration Seminar"></a>
+                </div>
+                <div class="talk">
+                    <div class="talk-content">
+                        <div class="talk-title">Quarkonium polarization at the LHC energies</div>
+                        <div class="talk-venue">RDFP, Sambalpur University, India</div>
+                        <div class="talk-date">Date: March, 2024</div>
+                        <div class="talk-description">
+                            In this talk I discuss the quarkonium polarization in ALICE experiment at LHC.
+                        </div>
+                    </div>
+                    <a href="#lightbox2"><img src="conference2.jpg" alt="RDFP, Sambalpur University"></a>
+                </div>
+                <div class="talk">
+                    <div class="talk-content">
+                        <div class="talk-title">Thermodynamics and statistical mechanics in heavy-ion collisions</div>
+                        <div class="talk-venue">Physics Club, IIT Indore, India</div>
+                        <div class="talk-date">Date: January, 2024</div>
+                        <div class="talk-description">
+                            In this talk I discuss the application of thermodynamics and statistical mechanics in heavy-ion collisions.
+                        </div>
+                    </div>
+                    <a href="#lightbox3"><img src="conference3.jpg" alt="Physics Club, IIT Indore"></a>
+                </div>
 
-		    </section>
+		<div class="talk">
+                    <div class="talk-content">
+                        <div class="talk-title">Dynamics of open charmed hadrons in an interacting hadronic medium</div>
+                        <div class="talk-venue">Heavy Flavor Meet, IIT Goa, Goa, India</div>
+                        <div class="talk-date">Date: November, 2023</div>
+                        <div class="talk-description">
+                            In this talk I discuss the diffusion and fluctuation dynamics of open charmed hadrons.
+                        </div>
+                    </div>
+                    <a href="#lightbox4"><img src="conference4.jpg" alt="Heavy Flavor Meet, IIT Goa"></a>
+		    </div>
+
+
+
+		    	<div class="talk">
+                    <div class="talk-content">
+                        <div class="talk-title">Quarkonium polarization in pp and Pb-Pb collisions with ALICE</div>
+                        <div class="talk-venue">Rencontres du Vietnam:
+                    Windows on the Universe, Quy Nhon, Vietnam</div>
+                        <div class="talk-date">Date: August, 2023</div>
+                        <div class="talk-description">
+                            In this talk I discuss the quarkonium
+                    polarization in pp and Pb-Pb collisions with ALICE experiment.
+                        </div>
+                    </div>
+                    <a href="#lightbox5"><img src="conference5.jpg" alt="Rencontres du Vietnam"></a>
+		    </div>
+
 		    
+            </div>
+        </section>
+    </div>
+
+
+
+    
+    <!-- Lightbox Sections -->
+    <div id="lightbox1" class="lightbox">
+        <a href="#_"><img src="conference1.jpg" alt="ALICE India Collaboration Seminar"></a>
+    </div>
+    <div id="lightbox2" class="lightbox">
+        <a href="#_"><img src="conference2.jpg" alt="RDFP, Sambalpur University"></a>
+    </div>
+    <div id="lightbox3" class="lightbox">
+        <a href="#_"><img src="conference3.jpg" alt="Physics Club, IIT Indore"></a>
+    </div>
+    <div id="lightbox4" class="lightbox">
+        <a href="#_"><img src="conference4.jpg" alt="Heavy Flavor Meet, IIT Goa"></a>
+    </div>
+
+        <div id="lightbox5" class="lightbox">
+        <a href="#_"><img src="conference5.jpg" alt="Rencontres du Vietnam"></a>
     </div>
 
     <footer>
